@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ה־BOX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230c0907'/%3E%3Ctext x='32' y='44' font-size='30' text-anchor='middle' fill='%23e3bd6b' font-family='Georgia' font-weight='700'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;500;700;900&family=Heebo:wght@300;400;500;700;800&family=Karantina:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-LEwgp5o8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DLdgnOzq.css">
+</head>
+<body>
+
+<!-- password gate (for show) -->
+<div id="gate" class="gate">
+  <div class="gate-inner">
+    <div class="gate-logo gold">ה־BOX</div>
+    <form id="gate-form" autocomplete="off">
+      <input id="gate-pass" type="password" placeholder="סיסמה" aria-label="סיסמה">
+      <button type="submit">כניסה</button>
+    </form>
+    <p id="gate-err" class="gate-err">לא נכון. נסו שוב.</p>
+  </div>
+</div>
+
+<!-- intro -->
+<div id="intro" class="intro" aria-hidden="true">
+  <div class="intro-line"></div>
+  <div class="intro-word gold">ה־BOX</div>
+</div>
+
+<canvas id="bubbles" class="bubbles" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<nav class="nav">
+  <a href="#top" class="nav-logo gold">ה־BOX</a>
+  <div class="nav-links">
+    <a href="#world">העולם</a>
+    <a href="#brothers">האחים</a>
+    <a href="#format">הפורמט</a>
+    <a href="#cameos">קמיאו</a>
+    <a href="#ep1">פרק 1</a>
+    <a href="#floor">הקומה</a>
+    <a href="#contact">צור קשר</a>
+  </div>
+</nav>
+
+<main id="smooth">
+
+<!-- 1. HERO -->
+<section id="top" class="hero">
+  <div class="hero-media"><img src="img/cover.jpg" alt="ציון ברוך ויובל סמו בבוקס" fetchpriority="high"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <div class="hero-kicker reveal-up">דרמה קומית &nbsp;|&nbsp; 12 פרקים × 35 דקות</div>
+    <h1 class="hero-title gold shine" aria-label="ה־BOX"><span class="t-he">ה־</span><span class="t-box">BOX</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-stars reveal-up">בכיכובם של <b>ציון ברוך</b> ו<b>יובל סמו</b></p>
+    <p class="hero-creator reveal-up">יוצר ותסריטאי: <b>אורי כץ</b></p>
+  </div>
+  <div class="scroll-cue"><span>גללו פנימה</span><i></i></div>
+</section>
+
+<!-- 2. LOGLINE (pinned) -->
+<section class="logline" id="logline">
+  <div class="logline-bg"><img src="img/lounge.jpg" alt=""></div>
+  <div class="logline-shade"></div>
+  <div class="logline-inner">
+    <p class="ll-1 words">בזמן שעל הדשא רודפים אחרי הכדור,</p>
+    <p class="ll-2 words gold">בקומה למעלה רודפים אחרי כוח.</p>
+    <p class="ll-body">ה־BOX היא דרמה קומית מהירה וחדה שמתרחשת כולה בקומת תאי ה־VIP של אצטדיון כדורגל. האחים אוזן, חזי ויורם, הם יזמי נדל״ן אמביציוזים ששוכרים בוקס כדי לפרוץ לליגה של הגדולים. כל משחק הופך לשדה קרב של דילים, אגו, קשרים והזדמנויות.</p>
+  </div>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>שמפניה</span><i>✦</i><span>דילים</span><i>✦</i><span>אגו</span><i>✦</i><span>קוויאר</span><i>✦</i><span>קשרים</span><i>✦</i><span>נדל״ן</span><i>✦</i><span>מרצדס</span><i>✦</i><span>סושי</span><i>✦</i><span>סודות</span><i>✦</i><span>כוח</span><i>✦</i>
+    <span>שמפניה</span><i>✦</i><span>דילים</span><i>✦</i><span>אגו</span><i>✦</i><span>קוויאר</span><i>✦</i><span>קשרים</span><i>✦</i><span>נדל״ן</span><i>✦</i><span>מרצדס</span><i>✦</i><span>סושי</span><i>✦</i><span>סודות</span><i>✦</i><span>כוח</span><i>✦</i>
+  </div>
+</div>
+
+<!-- 3. WORLD -->
+<section id="world" class="world">
+  <div class="wrap">
+    <div class="eyebrow">העולם של התאים הפרטיים</div>
+    <h2 class="h2 split">סמל הסטטוס <span class="gold">האולטימטיבי.</span></h2>
+    <div class="world-grid">
+      <div class="world-text">
+        <p class="lead fade">תא פרטי, המכונה <b>בוקס</b>, הוא למעשה סלון יוקרתי שמושכר לאדם או לבית עסק לעונה שלמה. ספות, בר, מסך ענק, ומרפסת פרטית מול המגרש.</p>
+        <p class="fade">לא קל לזכות בבוקס. רשימת ההמתנה ארוכה עד בלתי אפשרית, כי הבוקס הוא לא סתם מקום לראות בו כדורגל. בעל התא מקבל סלון יוקרתי, בר פרטי ומשרד לא רשמי, שבו נסגרים הדילים הגדולים של המשק.</p>
+        <div class="stats">
+          <div class="stat"><b class="count" data-to="30">0</b><span>תאים בקומה, לכל היותר</span></div>
+          <div class="stat"><b class="count" data-to="3">0</b><span>שנות המתנה לבוקס</span></div>
+          <div class="stat"><b><bdi dir="ltr">½M</bdi></b><span>שקל, כמעט, על בוקס אחד</span></div>
+        </div>
+      </div>
+      <figure class="world-img clip"><img src="img/celebration.jpg" alt=""></figure>
+    </div>
+    <div class="world-punch">
+      <p class="punch split">הכדורגל הוא רק <span class="gold">תפאורה.</span></p>
+      <p class="fade punch-sub">כאן השמפניה נשפכת בזמן שצורחים על הקוון, אימפריות נדל״ן נבנות בין סושי לקינוחים, וכולם מנסים להיראות חשובים מספיק כדי להיות שם.</p>
+    </div>
+    <div class="trio">
+      <figure class="clip"><img src="img/caviar.jpg" alt=""></figure>
+      <figure class="clip"><img src="img/women.jpg" alt=""></figure>
+      <figure class="clip"><img src="img/glass.jpg" alt=""></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4. QUOTE -->
+<section class="quote-sec">
+  <blockquote class="bigquote"><span class="q-mark gold">”</span><span class="q-text chars">מה שאומרים בבוקס,<br>נשאר בבוקס.</span></blockquote>
+</section>
+
+<!-- 5. BROTHERS -->
+<section id="brothers" class="brothers-intro">
+  <div class="eyebrow center">האחים</div>
+  <h2 class="mega gold shine split">אוזן</h2>
+  <p class="center fade sub">שני אחים. בוקס אחד. אפס כסף לבזבז.</p>
+</section>
+
+<section class="brother hezi">
+  <div class="b-bigname" aria-hidden="true">חזי אוזן · חזי אוזן · חזי אוזן · </div>
+  <div class="b-photo"><img src="img/zion.webp" alt="ציון ברוך"></div>
+  <div class="b-copy">
+    <div class="b-actor">ציון ברוך</div>
+    <div class="b-role">בתפקיד <span class="gold">חזי אוזן</span>, 40</div>
+    <p class="b-text">איש עסקים מצליח, יזם נדל״ן שלא בוחל גם בטקסטיל ובפיננסים. נשוי־פרוד לשגית, שבטוחה שהפרידה זמנית, ובמערכת יחסים עם ליאור, שחקנית ופליטת ריאליטי שמוסיפה לחייו נוכחות, רעש ותמונות לאינסטגרם.</p>
+    <p class="b-text">היפראקטיבי שלא מפסיק לרגע: בוחש, מחבר, לוחץ, סוגר. בתחרות עם כולם, תמיד, ונחוש להוכיח לכל מי שזלזל בו שהוא לא רק מוצלח, אלא מנצח. לחזי תמיד יש אינטרס, גלוי או נסתר.</p>
+    <div class="b-tag">אנרגיות של ארי גולד מ״הפמליה״.</div>
+  </div>
+</section>
+
+<section class="brother yoram">
+  <div class="b-bigname" aria-hidden="true">יורם אוזן · יורם אוזן · יורם אוזן · </div>
+  <div class="b-photo"><img src="img/semo.webp" alt="יובל סמו"></div>
+  <div class="b-copy">
+    <div class="b-actor">יובל סמו</div>
+    <div class="b-role">בתפקיד <span class="gold">יורם אוזן</span>, 51</div>
+    <p class="b-text">האח הגדול, השותף ואיש הכספים והאקסל. נשוי לדרורית ואב לשניים. תמיד התרחק ממסיבות ומפזרנות, אבל הבוקס והמפגש עם הנוצץ פתחו לו את הצ׳אקרות.</p>
+    <p class="b-text">עדיין נושא את הטראומה של פשיטת הרגל של אבא. מבקר את ההרפתקנות של חזי, ובסתר מעריץ את התעוזה שלו. ממולח ומחושב, אבל לא ממש מבין את העולם של הכרישים הגדולים.</p>
+    <div class="b-tag">די בומר.</div>
+  </div>
+</section>
+
+<section class="versus">
+  <div class="vs-side vs-h">
+    <div class="vs-name gold">חזי</div>
+    <ul><li>אימפולסיבי</li><li>אגרסיבי</li><li>הרפתקן</li></ul>
+  </div>
+  <div class="vs-mid"><span>VS</span></div>
+  <div class="vs-side vs-y">
+    <div class="vs-name gold">יורם</div>
+    <ul><li>שקול</li><li>שמרן</li><li>איש משפחה</li></ul>
+  </div>
+  <p class="vs-foot fade">יורם מוריד את חזי לקרקע כשצריך. חזי, כמובן, לא רואה את זה ככה. ומתחת לפני השטח, יורם הוא אדם תחרותי שרק מחכה להזדמנות להתפוצץ.</p>
+</section>
+
+<!-- 6. SEASON (pinned beats) -->
+<section id="season" class="season">
+  <div class="season-bg"><img src="img/deal.jpg" alt=""></div>
+  <div class="season-shade"></div>
+  <div class="season-inner">
+    <div class="eyebrow">העונה</div>
+    <div class="season-beats">
+      <p class="beat">חזי שכנע את יורם להשקיע כמעט <b class="gold">חצי מיליון שקל</b> בבוקס. המינגלינג, הוא הבטיח, יביא את העסקאות.</p>
+      <p class="beat">הם זכו במכרז לפרויקט דירות בשדה דב, ועכשיו מתקשים לממש את הזכויות. כל יום שעובר צובר עוד <b class="gold">חובות וריביות.</b></p>
+      <p class="beat">משחק אחרי משחק, הבוקס הופך מסמל סטטוס <b class="gold">לכלי הישרדות.</b> ויורם, שלא מבין כלום בכדורגל, נשאב לעולם הזוהר.</p>
+      <p class="beat">לקראת סוף העונה חזי מנסה לקנות את הקבוצה, מאחורי הגב של יורם. יורם מוכר מכרז אחר במחיר הפסד, בלי לספר לחזי.</p>
+      <p class="beat beat-final">האם האחים אוזן יאבדו רק את הבוקס, <span class="gold">או גם את השותפות ביניהם?</span></p>
+    </div>
+    <div class="season-dots"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- 7. FORMAT -->
+<section id="format" class="format">
+  <div class="wrap">
+    <div class="eyebrow">הפורמט</div>
+    <h2 class="h2 split">משחק אחד. פרק אחד. <span class="gold">זמן אמת.</span></h2>
+    <p class="lead fade">כל פרק מתרחש בזמן אמת, במהלך משחק כדורגל אחד. בזמן שהמשחק מתקדם על הדשא, בבוקס מתנהל משחק אחר. האורחים לא יודעים שהם חלק ממנו, ולחלקם יש תוכנית משלהם.</p>
+    <div class="refs">
+      <div class="ref fade"><div class="ref-name">The Pitt</div><p>זמן אמת. כאן ועכשיו. הכול חי, צפוף, ולפעמים על סף איבוד שליטה.</p></div>
+      <div class="ref-x gold">×</div>
+      <div class="ref fade"><div class="ref-name">The Studio</div><p>קצב, מצלמה שמשוטטת בחופשיות בין התאים, והופעות של סלבס בגרסה בדיונית של עצמם.</p></div>
+    </div>
+  </div>
+  <div class="clock-sec">
+    <div class="clock"><span class="clock-min">00</span><span class="clock-colon">:</span><span class="clock-sec-n">00</span></div>
+    <div class="track"><div class="track-fill"></div>
+      <div class="stop" style="--p:0"><b>01</b><span>הכנות לפני שריקת הפתיחה</span></div>
+      <div class="stop" style="--p:.25"><b>02</b><span>מחצית ראשונה</span></div>
+      <div class="stop" style="--p:.5"><b>03</b><span>הפסקת מחצית</span></div>
+      <div class="stop" style="--p:.75"><b>04</b><span>מחצית שנייה</span></div>
+      <div class="stop" style="--p:1"><b>05</b><span>סיום ואפילוג</span></div>
+    </div>
+    <p class="clock-foot">חמישה וואן־שוטים. המצלמה לא עוצרת.</p>
+  </div>
+</section>
+
+<!-- 8. GUESTS -->
+<section class="guests">
+  <div class="wrap">
+    <p class="guests-lead">בכל שבוע חזי ויורם מארחים בבוקס</p>
+    <div class="ticker"><div class="ticker-in">
+      <span>משקיעים</span><span>פוליטיקאים</span><span>בעלי הון</span><span>עורכי דין</span><span>אנשי תרבות</span><span>כדורגלני עבר</span><span>סלבריטאים</span><span>משקיעים</span>
+    </div></div>
+    <p class="guests-foot fade">לכאורה, חבורה אקראית שבאה לראות משחק. בפועל, <span class="gold">כל אחד הוזמן מסיבה אחרת.</span> האחים מחברים בין אנשים, מקדמים עסקאות, פותרים בעיות ומנסים להרשים את מי שצריך.</p>
+  </div>
+</section>
+
+<!-- 9. CAMEOS -->
+<section id="cameos" class="cameos">
+  <div class="flash" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">קמיאו</div>
+    <h2 class="h2 split">כולם רוצים <span class="gold">להיות בבוקס.</span></h2>
+    <p class="lead fade">כמו ב־The Studio, בכל פרק מגיעים לקומה אנשי ציבור מוכרים, בגרסאות בדיוניות של עצמם. אגדות כדורגל, זמרים, קומיקאים, שפים, אנשי עסקים וסלבס, כחלק טבעי מהעולם של התאים. הבוקס הוא התירוץ המושלם להביא אותם.</p>
+    <div class="ep1-cameos">
+      <div class="ep1-cameos-label">בפרק 1</div>
+      <div class="c-row" id="c-row-ep1"></div>
+    </div>
+    <div class="collage" id="collage"></div>
+    <p class="collage-foot fade">ועוד רבים. <span class="gold">כל פרק, אורח אחר.</span></p>
+  </div>
+</section>
+
+<!-- 10. EPISODE 1 (horizontal) -->
+<section id="ep1" class="ep1">
+  <div class="ep1-head">
+    <div class="eyebrow">פרק 1</div>
+    <h2 class="h2">קרקע <span class="gold">חקלאית</span></h2>
+    <p class="ep1-intro">לחזי וליורם יש מטרה אחת הערב: להפשיר קרקע חקלאית שבבעלותם לבנייה מסחרית, לפני שהחובות קוברים אותם. אורח הכבוד: אסי חלפון, סגן ראש העיר וחבר ועדת התכנון.</p>
+  </div>
+  <div class="h-pin">
+    <div class="h-clock"><span class="hc-min">00</span>׳</div>
+    <div class="h-track">
+      <article class="panel"><figure><img src="img/elevator.jpg" alt=""></figure><div class="p-copy"><div class="p-time">לפני שריקת הפתיחה</div><h3>אל תתקוף.</h3><p>דלתות המעלית נפתחות. חזי שם את חיוך המיליון דולר שלו. ליורם יש הוראה אחת: לא לדבר עסקים עם אסי. בכלל.</p></div></article>
+      <article class="panel"><figure><img src="img/lounge.jpg" alt=""></figure><div class="p-copy"><div class="p-time">מחצית ראשונה</div><h3>ללא רבב.</h3><p>על המרפסת חזי מרחרח את הכיוון. אבל זו שנת בחירות, ואסי צריך להיות, כמו שאומרים, ללא רבב. יורם כבר הספיק לשאול אותו מתי הוועדה מתכנסת.</p></div></article>
+      <article class="panel"><figure><img src="img/cards.jpg" alt=""></figure><div class="p-copy"><div class="p-time">הפסקת מחצית</div><h3>על חשבון הבית.</h3><p>מנטליסט, שמפניה של האוליגרך מהתא הסמוך וקוויאר שנאכל בכפית כמו פירה. הכול נרשם על האחים. יורם סופר כל שקל.</p></div></article>
+      <article class="panel"><figure><img src="img/hostess.jpg" alt=""></figure><div class="p-copy"><div class="p-time">מחצית שנייה</div><h3>הסוד.</h3><p>ואז חזי מגלה שלאסי יש עבר עם מאי, המארחת של הבוקס. אשתו של אסי יושבת במרחק שני מטרים. חזי מבהיר לאסי שהסוד שלו בטוח, כל עוד האחים יקבלו את מה שהם צריכים.</p></div></article>
+      <article class="panel"><figure><img src="img/deal.jpg" alt=""></figure><div class="p-copy"><div class="p-time">הדיל</div><h3>סגרנו.</h3><p>אסי נותן את המילה שלו. האחים חוגגים. ובמקביל חזי ״מוכר״ את הבוקס הריק שליד לסוחר מרצדס, בתמורה לרכב חדש. בוקס שאין לו שום זכות למכור.</p></div></article>
+      <article class="panel"><figure><img src="img/box9.jpg" alt=""></figure><div class="p-copy"><div class="p-time">גול</div><h3>הדלת נפתחת.</h3><p>האצטדיון מתפוצץ. הסוחר רוצה לראות את הנכס. יורם מוביל את כל האורחים לבוקס החשוך ופותח את הדלת. בפנים: אסי, עם המכנסיים למטה. ומאי. כולם רואים. כולל אשתו.</p></div></article>
+      <article class="panel"><figure><img src="img/aftermath.jpg" alt=""></figure><div class="p-copy"><div class="p-time">שריקת הסיום</div><h3>הקבוצה ניצחה.</h3><p>האחים אוזן הפסידו הכול. הקרקע לא תופשר. ויורם, מסתבר, כבר הספיק להחתים את הקבלן.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 11. QUOTE 2 -->
+<section class="quote-sec q2">
+  <blockquote class="bigquote"><span class="q-mark gold">”</span><span class="q-text chars">בקומה שלי כולם מנצחים.<br>גם כשמפסידים.</span></blockquote>
+  <cite class="fade">רונה, אחראית הקומה</cite>
+</section>
+
+<!-- 12. FLOOR / CHARACTERS -->
+<section id="floor" class="floor">
+  <div class="wrap">
+    <div class="eyebrow">הקומה</div>
+    <h2 class="h2 split">כל אחד פה <span class="gold">משחק משחק.</span></h2>
+    <div class="cast">
+      <div class="card"><div class="c-n">שגית <i>38</i></div><p>הפרודה של חזי. בטוחה שהפרידה זמנית ושהוא יחזור אליה.</p></div>
+      <div class="card"><div class="c-n">ליאור <i>28</i></div><p>בת הזוג של חזי. שחקנית ופליטת ריאליטי. רוצה את השמפניה של הביוקר.</p></div>
+      <div class="card"><div class="c-n">מאי <i>23</i></div><p>המארחת של הבוקס. אם מישהו יודע מי שווה ומי שווה יותר, זו מאי.</p></div>
+      <div class="card"><div class="c-n">רונה <i>38</i></div><p>סמנכ״לית הקבוצה ואחראית הקומה. מחליטה מי מקבל בוקס, ומתי.</p></div>
+      <div class="card"><div class="c-n">רומן <i>55</i></div><p>האוליגרך הרוסי מהתא הסמוך. לאחים אוזן יש איתו ביף אישי ותחרות סמויה של שופוני.</p></div>
+      <div class="card"><div class="c-n">נטשה <i>25</i></div><p>המארחת של רומן. מבינה את חוקי המשחק, ומשחקת אותם קר יותר.</p></div>
+      <div class="card"><div class="c-n">אליקו <i>34</i></div><p>המאבטח. תמיד חצי צעד אחרי האירוע, ואיכשהו תמיד קרוב.</p></div>
+      <div class="card"><div class="c-n">דרורית <i>49</i></div><p>אשתו של יורם. ״איפה שצריך להיות קשה אתה רך, ואיפה שצריך רך אתה קשה.״</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. MORE EPISODES -->
+<section class="more">
+  <div class="wrap">
+    <div class="eyebrow">עוד משחקים בעונה</div>
+    <h2 class="h2 split">כל שבוע, <span class="gold">משחק אחר.</span></h2>
+  </div>
+  <div class="eps">
+    <article class="ep"><b>01</b><h3>מאניה דיפרסיה</h3><p>אורח שהאחים צריכים ממנו השקעה מגיב לכל מהלך במשחק. כל כמעט־גול מפיל את העסקה, כל מהפך מחזיר אותה לחיים. חזי מנסה לתזמן את החתימה לרגע הנכון.</p></article>
+    <article class="ep"><b>02</b><h3>הפרד ומשול</h3><p>חזי ויורם הזמינו, בלי לדעת, שני אויבים מושבעים. הם עושים שמיניות באוויר כדי שלא ייפגשו. בסוף הם נפגשים, וסוגרים עסקה ביניהם. בלי האחים.</p></article>
+    <article class="ep"><b>03</b><h3>יום הולדת</h3><p>ליאור הפכה את הבוקס לקרקס של משפיענים, צלמים ולייבים, בדיוק כשחזי צריך לסגור עסקה שאסור שתיחשף.</p></article>
+    <article class="ep"><b>04</b><h3>השופט</h3><p>שופט לשעבר, שהיה מעורב בפרשת הטיית משחקים, מגיע כאורח. יש לו גישה להון לא מדווח. ובקומה מתחילות לרוץ שמועות.</p></article>
+    <article class="ep"><b>05</b><h3>ביקורת</h3><p>שף מפורסם בבוקס של האחים, ובתא השכן יושב מבקר המסעדות שהרס לו את הקריירה. השף רוצה נקמה. חזי מבין שזה עלול להתפוצץ לו בפנים.</p></article>
+    <article class="ep"><b>06</b><h3>בר מצווה</h3><p>בניגוד לנהלים, יורם מארגן בבוקס בר מצווה לבן שלו. להסתיר את זה מרונה? עם רב ודודות?</p></article>
+  </div>
+</section>
+
+<!-- 14. THE SET -->
+<section class="set">
+  <div class="wrap set-grid">
+    <div>
+      <div class="eyebrow">הסט</div>
+      <h2 class="h2 split">סט אחד. רציף. <span class="gold">בלי לעצור.</span></h2>
+      <p class="lead fade">באולפן נבנה סט אחד רציף: תאי ה־VIP, המסדרון, הלאונג׳, המטבח והמרפסות. כל החללים מחוברים, כך שהמצלמה עוברת ביניהם ברצף, ונשארת כל הזמן בתוך ההתרחשות.</p>
+    </div>
+    <div class="set-imgs">
+      <figure class="clip s1"><img src="img/studio.jpg" alt="הסט באולפן"></figure>
+      <figure class="clip s2"><img src="img/corridor.jpg" alt="המסדרון"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 15. CREATOR -->
+<section class="creator">
+  <div class="creator-photo"><img src="img/uri.webp" alt="אורי כץ"></div>
+  <div class="creator-copy">
+    <div class="eyebrow">יוצר ותסריטאי</div>
+    <h2 class="mega-name gold shine">אורי כץ</h2>
+    <p class="creator-line">האיש מאחורי ״לשחרר את שולי״ 1 ו־2.</p>
+  </div>
+</section>
+
+<!-- 16. CLOSE -->
+<section id="contact" class="close">
+  <div class="close-title gold shine">ה־BOX</div>
+  <p class="close-sub">דרמה קומית &nbsp;|&nbsp; 12 × 35׳</p>
+  <img class="ygp" src="img/ygp-logo.png" alt="Yoav Gross Productions">
+  <div class="contacts">
+    <div><b>יואב גרוס</b><span>מנכ״ל ומייסד</span><a href="mailto:yoav@yoavgross.com">yoav@yoavgross.com</a></div>
+    <div><b>אריאל וייסברוד</b><span>סמנכ״ל תוכן ושותפויות</span><a href="mailto:ariel@yoavgross.com">ariel@yoavgross.com</a></div>
+  </div>
+  <p class="fine">חומר חסוי, להצגה בלבד.</p>
+</section>
+
+</main>
+</body>
+</html>
